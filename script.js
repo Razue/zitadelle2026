@@ -105,7 +105,7 @@ function renderSchedule(data) {
         <div class="schedule-locations">
             <div class="schedule-time-header">Zeit</div>
             <div class="location-header location-stage">Hauptbühne</div>
-            <div class="location-header location-beach">Strand</div>
+            <div class="location-header location-amphitheater">Amphitheater</div>
             <div class="location-header location-pool">Pool</div>
         </div>
     `;
@@ -119,7 +119,7 @@ function renderSchedule(data) {
                 <div class="schedule-row">
                     <div class="schedule-time">${row.Zeit}</div>
                     ${renderCell(row.Hauptbuehne_Typ, row.Hauptbuehne_Titel, row.Hauptbuehne_Beschreibung, 'Hauptbühne')}
-                    ${renderCell(row.Strand_Typ, row.Strand_Titel, row.Strand_Beschreibung, 'Strand')}
+                    ${renderCell(row.Amphitheater_Typ, row.Amphitheater_Titel, row.Amphitheater_Beschreibung, 'Amphitheater')}
                     ${renderCell(row.Pool_Typ, row.Pool_Titel, row.Pool_Beschreibung, 'Pool')}
                 </div>
             `;

@@ -54,20 +54,20 @@ Von technischen Deep-Dives über wirtschaftliche Diskussionen bis hin zu praktis
 
 ## Programm
 
-**3 Locations:** Hauptbühne | Strand | Pool
+**3 Locations:** Hauptbühne | Amphitheater | Pool
 
 ### Tag 1 - Donnerstag (28.05.)
 
-| Zeit | Hauptbühne | Strand | Pool |
-|------|------------|--------|------|
+| Zeit | Hauptbühne | Amphitheater | Pool |
+|------|------------|--------------|------|
 | 14:00 | Check-in & Willkommen | Zelte aufbauen | — |
 | 18:00 | **Keynote:** Eröffnung Zitadelle 2026 | — | — |
 | 19:30 | Gemeinsames Abendessen & BBQ | Lagerfeuer | — |
 
 ### Tag 2 - Freitag (29.05.)
 
-| Zeit | Hauptbühne | Strand | Pool |
-|------|------------|--------|------|
+| Zeit | Hauptbühne | Amphitheater | Pool |
+|------|------------|--------------|------|
 | 09:00 | **Vortrag:** Bitcoin Basics Refresher | **Workshop:** Yoga & Meditation | — |
 | 10:30 | **Vortrag:** Lightning Network | **Workshop:** Cold Storage Setup | Bitcoin & Familie |
 | 14:00 | **Vortrag:** Lightning Deep Dive | **Workshop:** Vexl Trading | Nostr & Social Meetup |
@@ -76,8 +76,8 @@ Von technischen Deep-Dives über wirtschaftliche Diskussionen bis hin zu praktis
 
 ### Tag 3 - Samstag (30.05.)
 
-| Zeit | Hauptbühne | Strand | Pool |
-|------|------------|--------|------|
+| Zeit | Hauptbühne | Amphitheater | Pool |
+|------|------------|--------------|------|
 | 09:00 | **Vortrag:** Austrian Economics | **Workshop:** Bitcoin Education | Networking Brunch |
 | 11:00 | **Panel:** Bitcoin Mining | **Workshop:** Multisig Setups | Vexl Quiz |
 | 14:00 | **Panel:** Bitcoin Adoption weltweit | **Workshop:** Nostr & Pareto | Pool Party |
@@ -85,8 +85,8 @@ Von technischen Deep-Dives über wirtschaftliche Diskussionen bis hin zu praktis
 
 ### Tag 4 - Sonntag (31.05.)
 
-| Zeit | Hauptbühne | Strand | Pool |
-|------|------------|--------|------|
+| Zeit | Hauptbühne | Amphitheater | Pool |
+|------|------------|--------------|------|
 | 09:00 | **Keynote:** Closing Keynote | Letztes Frühstück | — |
 | 10:30 | Open Space | Gruppenfoto | Kontakte tauschen |
 | 12:00 | Check-out & Verabschiedung | Fähre nach Šibenik | — |
