@@ -54,40 +54,42 @@ Von technischen Deep-Dives über wirtschaftliche Diskussionen bis hin zu praktis
 
 ## Programm
 
+**3 Locations:** Hauptbühne | Strand | Pool
+
 ### Tag 1 - Donnerstag (28.05.)
 
-| Zeit | Typ | Programm |
-|------|-----|----------|
-| 14:00 | Ankunft | Check-in & Willkommen |
-| 18:00 | Keynote | Eröffnung Zitadelle 2026 |
-| 19:30 | Social | Gemeinsames Abendessen & BBQ |
+| Zeit | Hauptbühne | Strand | Pool |
+|------|------------|--------|------|
+| 14:00 | Check-in & Willkommen | Zelte aufbauen | — |
+| 18:00 | **Keynote:** Eröffnung Zitadelle 2026 | — | — |
+| 19:30 | Gemeinsames Abendessen & BBQ | Lagerfeuer | — |
 
 ### Tag 2 - Freitag (29.05.)
 
-| Zeit | Typ | Programm |
-|------|-----|----------|
-| 09:00 | Vortrag | Bitcoin Basics Refresher |
-| 10:30 | Workshop | Cold Storage Setup |
-| 14:00 | Vortrag | Lightning Network Deep Dive |
-| 16:00 | Workshop | Node Setup Workshop |
-| 20:00 | Social | Lagerfeuer & Diskussionen |
+| Zeit | Hauptbühne | Strand | Pool |
+|------|------------|--------|------|
+| 09:00 | **Vortrag:** Bitcoin Basics Refresher | **Workshop:** Yoga & Meditation | — |
+| 10:30 | **Vortrag:** Lightning Network | **Workshop:** Cold Storage Setup | Bitcoin & Familie |
+| 14:00 | **Vortrag:** Lightning Deep Dive | **Workshop:** Vexl Trading | Nostr & Social Meetup |
+| 16:00 | **Workshop:** Node Setup | Schwimmen & Chillen | **Workshop:** Kickstr Demo |
+| 20:00 | Abendessen | Lagerfeuer & Diskussionen | — |
 
 ### Tag 3 - Samstag (30.05.)
 
-| Zeit | Typ | Programm |
-|------|-----|----------|
-| 09:00 | Vortrag | Bitcoin & Austrian Economics |
-| 11:00 | Workshop | Multisig Setups |
-| 14:00 | Panel | Bitcoin Adoption weltweit |
-| 20:00 | Party | Zitadelle Night |
+| Zeit | Hauptbühne | Strand | Pool |
+|------|------------|--------|------|
+| 09:00 | **Vortrag:** Austrian Economics | **Workshop:** Bitcoin Education | Networking Brunch |
+| 11:00 | **Panel:** Bitcoin Mining | **Workshop:** Multisig Setups | Vexl Quiz |
+| 14:00 | **Panel:** Bitcoin Adoption weltweit | **Workshop:** Nostr & Pareto | Pool Party |
+| 20:00 | **Party:** Zitadelle Night | Beach Vibes & DJ | Lounge Area |
 
 ### Tag 4 - Sonntag (31.05.)
 
-| Zeit | Typ | Programm |
-|------|-----|----------|
-| 09:00 | Vortrag | Closing Keynote |
-| 10:30 | Community | Open Space |
-| 12:00 | Abreise | Check-out & Verabschiedung |
+| Zeit | Hauptbühne | Strand | Pool |
+|------|------------|--------|------|
+| 09:00 | **Keynote:** Closing Keynote | Letztes Frühstück | — |
+| 10:30 | Open Space | Gruppenfoto | Kontakte tauschen |
+| 12:00 | Check-out & Verabschiedung | Fähre nach Šibenik | — |
 
 ---
 

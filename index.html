@@ -210,138 +210,280 @@
             </div>
 
             <div class="schedule-content">
+                <!-- Location Headers -->
+                <div class="schedule-locations">
+                    <div class="schedule-time-header">Zeit</div>
+                    <div class="location-header location-stage">Hauptbühne</div>
+                    <div class="location-header location-beach">Strand</div>
+                    <div class="location-header location-pool">Pool</div>
+                </div>
+
                 <!-- Day 1 -->
                 <div class="schedule-day active" id="day-1">
-                    <div class="schedule-item">
+                    <div class="schedule-row">
                         <div class="schedule-time">14:00</div>
-                        <div class="schedule-details">
+                        <div class="schedule-cell" data-location="Hauptbühne">
                             <span class="schedule-type type-general">Ankunft</span>
                             <h4>Check-in & Willkommen</h4>
-                            <p>Anmeldung, Zeltaufbau, Ankommen</p>
+                            <p>Anmeldung & Registrierung</p>
+                        </div>
+                        <div class="schedule-cell" data-location="Strand">
+                            <span class="schedule-type type-general">Ankommen</span>
+                            <h4>Zelte aufbauen</h4>
+                            <p>Unterkunft beziehen</p>
+                        </div>
+                        <div class="schedule-cell empty" data-location="Pool">
+                            <span class="cell-empty">—</span>
                         </div>
                     </div>
-                    <div class="schedule-item">
+                    <div class="schedule-row">
                         <div class="schedule-time">18:00</div>
-                        <div class="schedule-details">
+                        <div class="schedule-cell" data-location="Hauptbühne">
                             <span class="schedule-type type-talk">Keynote</span>
                             <h4>Eröffnung Zitadelle 2026</h4>
                             <p>Willkommen in der Zitadelle</p>
                         </div>
+                        <div class="schedule-cell empty" data-location="Strand">
+                            <span class="cell-empty">—</span>
+                        </div>
+                        <div class="schedule-cell empty" data-location="Pool">
+                            <span class="cell-empty">—</span>
+                        </div>
                     </div>
-                    <div class="schedule-item">
+                    <div class="schedule-row">
                         <div class="schedule-time">19:30</div>
-                        <div class="schedule-details">
+                        <div class="schedule-cell" data-location="Hauptbühne">
                             <span class="schedule-type type-general">Social</span>
                             <h4>Gemeinsames Abendessen</h4>
-                            <p>Networking & BBQ</p>
+                            <p>BBQ & Networking</p>
+                        </div>
+                        <div class="schedule-cell" data-location="Strand">
+                            <span class="schedule-type type-general">Chill</span>
+                            <h4>Lagerfeuer</h4>
+                            <p>Kennenlernen</p>
+                        </div>
+                        <div class="schedule-cell empty" data-location="Pool">
+                            <span class="cell-empty">—</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Day 2 -->
                 <div class="schedule-day" id="day-2">
-                    <div class="schedule-item">
+                    <div class="schedule-row">
                         <div class="schedule-time">09:00</div>
-                        <div class="schedule-details">
+                        <div class="schedule-cell" data-location="Hauptbühne">
                             <span class="schedule-type type-talk">Vortrag</span>
                             <h4>Bitcoin Basics Refresher</h4>
                             <p>Die Grundlagen von Bitcoin</p>
                         </div>
+                        <div class="schedule-cell" data-location="Strand">
+                            <span class="schedule-type type-workshop">Workshop</span>
+                            <h4>Yoga & Meditation</h4>
+                            <p>Morgensession am Strand</p>
+                        </div>
+                        <div class="schedule-cell empty" data-location="Pool">
+                            <span class="cell-empty">—</span>
+                        </div>
                     </div>
-                    <div class="schedule-item">
+                    <div class="schedule-row">
                         <div class="schedule-time">10:30</div>
-                        <div class="schedule-details">
+                        <div class="schedule-cell" data-location="Hauptbühne">
+                            <span class="schedule-type type-talk">Vortrag</span>
+                            <h4>Lightning Network</h4>
+                            <p>Technische Grundlagen</p>
+                        </div>
+                        <div class="schedule-cell" data-location="Strand">
                             <span class="schedule-type type-workshop">Workshop</span>
                             <h4>Cold Storage Setup</h4>
-                            <p>Hardware Wallets richtig einrichten</p>
+                            <p>Hardware Wallets einrichten</p>
+                        </div>
+                        <div class="schedule-cell" data-location="Pool">
+                            <span class="schedule-type type-general">Diskussion</span>
+                            <h4>Bitcoin & Familie</h4>
+                            <p>Offene Runde</p>
                         </div>
                     </div>
-                    <div class="schedule-item">
+                    <div class="schedule-row">
                         <div class="schedule-time">14:00</div>
-                        <div class="schedule-details">
+                        <div class="schedule-cell" data-location="Hauptbühne">
                             <span class="schedule-type type-talk">Vortrag</span>
-                            <h4>Lightning Network Deep Dive</h4>
-                            <p>Technische Grundlagen & Anwendungen</p>
+                            <h4>Lightning Deep Dive</h4>
+                            <p>Fortgeschrittene Konzepte</p>
                         </div>
-                    </div>
-                    <div class="schedule-item">
-                        <div class="schedule-time">16:00</div>
-                        <div class="schedule-details">
+                        <div class="schedule-cell" data-location="Strand">
                             <span class="schedule-type type-workshop">Workshop</span>
-                            <h4>Node Setup Workshop</h4>
-                            <p>Deinen eigenen Bitcoin Node betreiben</p>
+                            <h4>Vexl Trading</h4>
+                            <p>P2P Bitcoin kaufen</p>
+                        </div>
+                        <div class="schedule-cell" data-location="Pool">
+                            <span class="schedule-type type-general">Meetup</span>
+                            <h4>Nostr & Social</h4>
+                            <p>Dezentrale Netzwerke</p>
                         </div>
                     </div>
-                    <div class="schedule-item">
+                    <div class="schedule-row">
+                        <div class="schedule-time">16:00</div>
+                        <div class="schedule-cell" data-location="Hauptbühne">
+                            <span class="schedule-type type-workshop">Workshop</span>
+                            <h4>Node Setup</h4>
+                            <p>Eigenen Node betreiben</p>
+                        </div>
+                        <div class="schedule-cell" data-location="Strand">
+                            <span class="schedule-type type-general">Freizeit</span>
+                            <h4>Schwimmen & Chillen</h4>
+                            <p>Entspannung am Meer</p>
+                        </div>
+                        <div class="schedule-cell" data-location="Pool">
+                            <span class="schedule-type type-workshop">Workshop</span>
+                            <h4>Kickstr Demo</h4>
+                            <p>Bitcoin-basiertes Crowdfunding</p>
+                        </div>
+                    </div>
+                    <div class="schedule-row">
                         <div class="schedule-time">20:00</div>
-                        <div class="schedule-details">
+                        <div class="schedule-cell" data-location="Hauptbühne">
                             <span class="schedule-type type-general">Social</span>
-                            <h4>Lagerfeuer & Diskussionen</h4>
+                            <h4>Abendessen</h4>
+                            <p>Gemeinsames Essen</p>
+                        </div>
+                        <div class="schedule-cell" data-location="Strand">
+                            <span class="schedule-type type-general">Lagerfeuer</span>
+                            <h4>Diskussionen</h4>
                             <p>Offene Gesprächsrunden</p>
+                        </div>
+                        <div class="schedule-cell empty" data-location="Pool">
+                            <span class="cell-empty">—</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Day 3 -->
                 <div class="schedule-day" id="day-3">
-                    <div class="schedule-item">
+                    <div class="schedule-row">
                         <div class="schedule-time">09:00</div>
-                        <div class="schedule-details">
+                        <div class="schedule-cell" data-location="Hauptbühne">
                             <span class="schedule-type type-talk">Vortrag</span>
-                            <h4>Bitcoin & Austrian Economics</h4>
+                            <h4>Austrian Economics</h4>
                             <p>Warum hartes Geld wichtig ist</p>
                         </div>
-                    </div>
-                    <div class="schedule-item">
-                        <div class="schedule-time">11:00</div>
-                        <div class="schedule-details">
+                        <div class="schedule-cell" data-location="Strand">
                             <span class="schedule-type type-workshop">Workshop</span>
-                            <h4>Multisig Setups</h4>
-                            <p>Fortgeschrittene Sicherheit für deine Sats</p>
+                            <h4>Bitcoin Education</h4>
+                            <p>Wie erklärt man Bitcoin?</p>
+                        </div>
+                        <div class="schedule-cell" data-location="Pool">
+                            <span class="schedule-type type-general">Frühstück</span>
+                            <h4>Networking Brunch</h4>
+                            <p>Kaffee & Gespräche</p>
                         </div>
                     </div>
-                    <div class="schedule-item">
+                    <div class="schedule-row">
+                        <div class="schedule-time">11:00</div>
+                        <div class="schedule-cell" data-location="Hauptbühne">
+                            <span class="schedule-type type-talk">Panel</span>
+                            <h4>Bitcoin Mining</h4>
+                            <p>Erfahrungen & Insights</p>
+                        </div>
+                        <div class="schedule-cell" data-location="Strand">
+                            <span class="schedule-type type-workshop">Workshop</span>
+                            <h4>Multisig Setups</h4>
+                            <p>Fortgeschrittene Sicherheit</p>
+                        </div>
+                        <div class="schedule-cell" data-location="Pool">
+                            <span class="schedule-type type-general">Quiz</span>
+                            <h4>Vexl Quiz</h4>
+                            <p>Wissen testen & gewinnen</p>
+                        </div>
+                    </div>
+                    <div class="schedule-row">
                         <div class="schedule-time">14:00</div>
-                        <div class="schedule-details">
+                        <div class="schedule-cell" data-location="Hauptbühne">
                             <span class="schedule-type type-talk">Panel</span>
                             <h4>Bitcoin Adoption weltweit</h4>
                             <p>Berichte aus aller Welt</p>
                         </div>
+                        <div class="schedule-cell" data-location="Strand">
+                            <span class="schedule-type type-workshop">Workshop</span>
+                            <h4>Nostr & Pareto</h4>
+                            <p>Dezentrale Medien</p>
+                        </div>
+                        <div class="schedule-cell" data-location="Pool">
+                            <span class="schedule-type type-general">Freizeit</span>
+                            <h4>Pool Party</h4>
+                            <p>Entspannung & Spass</p>
+                        </div>
                     </div>
-                    <div class="schedule-item">
+                    <div class="schedule-row">
                         <div class="schedule-time">20:00</div>
-                        <div class="schedule-details">
+                        <div class="schedule-cell" data-location="Hauptbühne">
                             <span class="schedule-type type-general">Party</span>
                             <h4>Zitadelle Night</h4>
                             <p>Die legendäre Bitcoin Party</p>
+                        </div>
+                        <div class="schedule-cell" data-location="Strand">
+                            <span class="schedule-type type-general">Musik</span>
+                            <h4>Beach Vibes</h4>
+                            <p>DJ & Tanzen</p>
+                        </div>
+                        <div class="schedule-cell" data-location="Pool">
+                            <span class="schedule-type type-general">Chill</span>
+                            <h4>Lounge Area</h4>
+                            <p>Entspannte Gespräche</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Day 4 -->
                 <div class="schedule-day" id="day-4">
-                    <div class="schedule-item">
+                    <div class="schedule-row">
                         <div class="schedule-time">09:00</div>
-                        <div class="schedule-details">
-                            <span class="schedule-type type-talk">Vortrag</span>
+                        <div class="schedule-cell" data-location="Hauptbühne">
+                            <span class="schedule-type type-talk">Keynote</span>
                             <h4>Closing Keynote</h4>
                             <p>Was wir gelernt haben</p>
                         </div>
-                    </div>
-                    <div class="schedule-item">
-                        <div class="schedule-time">10:30</div>
-                        <div class="schedule-details">
-                            <span class="schedule-type type-general">Community</span>
-                            <h4>Open Space</h4>
-                            <p>Letzte Diskussionen & Vernetzung</p>
+                        <div class="schedule-cell" data-location="Strand">
+                            <span class="schedule-type type-general">Frühstück</span>
+                            <h4>Letztes Frühstück</h4>
+                            <p>Gemeinsam starten</p>
+                        </div>
+                        <div class="schedule-cell empty" data-location="Pool">
+                            <span class="cell-empty">—</span>
                         </div>
                     </div>
-                    <div class="schedule-item">
+                    <div class="schedule-row">
+                        <div class="schedule-time">10:30</div>
+                        <div class="schedule-cell" data-location="Hauptbühne">
+                            <span class="schedule-type type-general">Community</span>
+                            <h4>Open Space</h4>
+                            <p>Letzte Diskussionen</p>
+                        </div>
+                        <div class="schedule-cell" data-location="Strand">
+                            <span class="schedule-type type-general">Foto</span>
+                            <h4>Gruppenfoto</h4>
+                            <p>Erinnerung festhalten</p>
+                        </div>
+                        <div class="schedule-cell" data-location="Pool">
+                            <span class="schedule-type type-general">Vernetzung</span>
+                            <h4>Kontakte tauschen</h4>
+                            <p>Nostr & Co.</p>
+                        </div>
+                    </div>
+                    <div class="schedule-row">
                         <div class="schedule-time">12:00</div>
-                        <div class="schedule-details">
+                        <div class="schedule-cell" data-location="Hauptbühne">
                             <span class="schedule-type type-general">Abreise</span>
-                            <h4>Check-out & Verabschiedung</h4>
-                            <p>Fähre zurück nach Šibenik</p>
+                            <h4>Check-out</h4>
+                            <p>Verabschiedung</p>
+                        </div>
+                        <div class="schedule-cell" data-location="Strand">
+                            <span class="schedule-type type-general">Abreise</span>
+                            <h4>Fähre</h4>
+                            <p>Zurück nach Šibenik</p>
+                        </div>
+                        <div class="schedule-cell empty" data-location="Pool">
+                            <span class="cell-empty">—</span>
                         </div>
                     </div>
                 </div>

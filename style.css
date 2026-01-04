@@ -512,6 +512,57 @@ a:hover {
     border-color: var(--color-text);
 }
 
+/* Location Headers */
+.schedule-locations {
+    display: grid;
+    grid-template-columns: 80px repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+    position: sticky;
+    top: 64px;
+    background: var(--color-bg);
+    padding: 16px 0;
+    z-index: 10;
+}
+
+.schedule-time-header {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+}
+
+.location-header {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 12px 16px;
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.location-stage {
+    background: rgba(247, 147, 26, 0.15);
+    color: var(--color-accent);
+    border: 1px solid rgba(247, 147, 26, 0.3);
+}
+
+.location-beach {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.location-pool {
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--color-success);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
 .schedule-day {
     display: none;
 }
@@ -520,50 +571,70 @@ a:hover {
     display: block;
 }
 
-.schedule-item {
-    display: flex;
-    gap: 24px;
-    padding: 20px 24px;
-    background: var(--color-bg-secondary);
-    border-radius: var(--border-radius);
+/* Schedule Grid Rows */
+.schedule-row {
+    display: grid;
+    grid-template-columns: 80px repeat(3, 1fr);
+    gap: 12px;
     margin-bottom: 12px;
-    border: 1px solid var(--color-border);
-    transition: var(--transition);
-    align-items: flex-start;
-}
-
-.schedule-item:hover {
-    border-color: var(--color-border-light);
 }
 
 .schedule-time {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: var(--color-accent);
-    min-width: 60px;
-    padding-top: 2px;
+    padding-top: 16px;
 }
 
-.schedule-details h4 {
-    font-size: 1rem;
+.schedule-cell {
+    background: var(--color-bg-secondary);
+    padding: 16px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border);
+    transition: var(--transition);
+    min-height: 100px;
+}
+
+.schedule-cell:hover:not(.empty) {
+    border-color: var(--color-border-light);
+    transform: translateY(-2px);
+}
+
+.schedule-cell.empty {
+    background: var(--color-bg-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+}
+
+.cell-empty {
+    color: var(--color-text-muted);
+    font-size: 1.5rem;
+}
+
+.schedule-cell h4 {
+    font-size: 0.9rem;
     margin-bottom: 4px;
     font-weight: 600;
+    line-height: 1.3;
 }
 
-.schedule-details p {
+.schedule-cell p {
     color: var(--color-text-muted);
-    font-size: 0.85rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
 }
 
 .schedule-type {
     display: inline-block;
-    padding: 3px 10px;
+    padding: 3px 8px;
     border-radius: 100px;
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 8px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
 }
 
 .type-talk {
@@ -834,6 +905,26 @@ a:hover {
         grid-template-columns: repeat(2, 1fr);
         gap: 32px;
     }
+
+    .schedule-locations,
+    .schedule-row {
+        grid-template-columns: 60px repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .schedule-cell {
+        padding: 12px;
+        min-height: 90px;
+    }
+
+    .schedule-cell h4 {
+        font-size: 0.8rem;
+    }
+
+    .location-header {
+        font-size: 0.7rem;
+        padding: 10px 8px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -873,9 +964,46 @@ a:hover {
         gap: 32px;
     }
 
-    .schedule-item {
+    /* Mobile schedule: stack vertically */
+    .schedule-locations {
+        display: none;
+    }
+
+    .schedule-row {
+        display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 8px;
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .schedule-time {
+        font-size: 1.1rem;
+        padding: 0;
+        margin-bottom: 8px;
+    }
+
+    .schedule-cell {
+        min-height: auto;
+        padding: 16px;
+    }
+
+    .schedule-cell::before {
+        content: attr(data-location);
+        display: block;
+        font-size: 0.65rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--color-text-muted);
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .schedule-cell.empty {
+        display: none;
     }
 
     .about-stats {
