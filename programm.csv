@@ -1,0 +1,16 @@
+Tag,Zeit,Hauptbuehne_Typ,Hauptbuehne_Titel,Hauptbuehne_Beschreibung,Strand_Typ,Strand_Titel,Strand_Beschreibung,Pool_Typ,Pool_Titel,Pool_Beschreibung
+1,14:00,Ankunft,Check-in & Willkommen,Anmeldung & Registrierung,Ankommen,Zelte aufbauen,Unterkunft beziehen,,,
+1,18:00,Keynote,Eröffnung Zitadelle 2026,Willkommen in der Zitadelle,,,,,,,
+1,19:30,Social,Gemeinsames Abendessen,BBQ & Networking,Chill,Lagerfeuer,Kennenlernen,,,
+2,09:00,Vortrag,Bitcoin Basics Refresher,Die Grundlagen von Bitcoin,Workshop,Yoga & Meditation,Morgensession am Strand,,,
+2,10:30,Vortrag,Lightning Network,Technische Grundlagen,Workshop,Cold Storage Setup,Hardware Wallets einrichten,Diskussion,Bitcoin & Familie,Offene Runde
+2,14:00,Vortrag,Lightning Deep Dive,Fortgeschrittene Konzepte,Workshop,Vexl Trading,P2P Bitcoin kaufen,Meetup,Nostr & Social,Dezentrale Netzwerke
+2,16:00,Workshop,Node Setup,Eigenen Node betreiben,Freizeit,Schwimmen & Chillen,Entspannung am Meer,Workshop,Kickstr Demo,Bitcoin-basiertes Crowdfunding
+2,20:00,Social,Abendessen,Gemeinsames Essen,Lagerfeuer,Diskussionen,Offene Gesprächsrunden,,,
+3,09:00,Vortrag,Austrian Economics,Warum hartes Geld wichtig ist,Workshop,Bitcoin Education,Wie erklärt man Bitcoin?,Frühstück,Networking Brunch,Kaffee & Gespräche
+3,11:00,Panel,Bitcoin Mining,Erfahrungen & Insights,Workshop,Multisig Setups,Fortgeschrittene Sicherheit,Quiz,Vexl Quiz,Wissen testen & gewinnen
+3,14:00,Panel,Bitcoin Adoption weltweit,Berichte aus aller Welt,Workshop,Nostr & Pareto,Dezentrale Medien,Freizeit,Pool Party,Entspannung & Spass
+3,20:00,Party,Zitadelle Night,Die legendäre Bitcoin Party,Musik,Beach Vibes,DJ & Tanzen,Chill,Lounge Area,Entspannte Gespräche
+4,09:00,Keynote,Closing Keynote,Was wir gelernt haben,Frühstück,Letztes Frühstück,Gemeinsam starten,,,
+4,10:30,Community,Open Space,Letzte Diskussionen,Foto,Gruppenfoto,Erinnerung festhalten,Vernetzung,Kontakte tauschen,Nostr & Co.
+4,12:00,Abreise,Check-out,Verabschiedung,Abreise,Fähre,Zurück nach Šibenik,,,

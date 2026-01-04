@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile Menu Toggle
     initMobileMenu();
 
-    // Schedule Tabs
-    initScheduleTabs();
+    // Load Schedule from CSV
+    loadScheduleFromCSV();
 
     // Smooth Scroll for Navigation
     initSmoothScroll();
@@ -35,14 +35,134 @@ function initMobileMenu() {
     }
 }
 
+// ===== Load Schedule from CSV =====
+async function loadScheduleFromCSV() {
+    try {
+        const response = await fetch('programm.csv');
+        const csvText = await response.text();
+        const scheduleData = parseCSV(csvText);
+        renderSchedule(scheduleData);
+        initScheduleTabs();
+    } catch (error) {
+        console.error('Fehler beim Laden des Programms:', error);
+    }
+}
+
+// Parse CSV to structured data
+function parseCSV(csvText) {
+    const lines = csvText.trim().split('\n');
+    const headers = lines[0].split(',');
+    const data = [];
+
+    for (let i = 1; i < lines.length; i++) {
+        const values = parseCSVLine(lines[i]);
+        const row = {};
+        headers.forEach((header, index) => {
+            row[header.trim()] = values[index] ? values[index].trim() : '';
+        });
+        data.push(row);
+    }
+
+    return data;
+}
+
+// Handle CSV values with commas inside quotes
+function parseCSVLine(line) {
+    const values = [];
+    let current = '';
+    let inQuotes = false;
+
+    for (let i = 0; i < line.length; i++) {
+        const char = line[i];
+        if (char === '"') {
+            inQuotes = !inQuotes;
+        } else if (char === ',' && !inQuotes) {
+            values.push(current);
+            current = '';
+        } else {
+            current += char;
+        }
+    }
+    values.push(current);
+    return values;
+}
+
+// Render schedule from data
+function renderSchedule(data) {
+    const container = document.getElementById('schedule-container');
+    if (!container) return;
+
+    // Group by day
+    const days = {};
+    data.forEach(row => {
+        const day = row.Tag;
+        if (!days[day]) days[day] = [];
+        days[day].push(row);
+    });
+
+    // Build HTML
+    let html = `
+        <div class="schedule-locations">
+            <div class="schedule-time-header">Zeit</div>
+            <div class="location-header location-stage">Hauptbühne</div>
+            <div class="location-header location-beach">Strand</div>
+            <div class="location-header location-pool">Pool</div>
+        </div>
+    `;
+
+    Object.keys(days).forEach(dayNum => {
+        const isFirst = dayNum === '1';
+        html += `<div class="schedule-day${isFirst ? ' active' : ''}" id="day-${dayNum}">`;
+
+        days[dayNum].forEach(row => {
+            html += `
+                <div class="schedule-row">
+                    <div class="schedule-time">${row.Zeit}</div>
+                    ${renderCell(row.Hauptbuehne_Typ, row.Hauptbuehne_Titel, row.Hauptbuehne_Beschreibung, 'Hauptbühne')}
+                    ${renderCell(row.Strand_Typ, row.Strand_Titel, row.Strand_Beschreibung, 'Strand')}
+                    ${renderCell(row.Pool_Typ, row.Pool_Titel, row.Pool_Beschreibung, 'Pool')}
+                </div>
+            `;
+        });
+
+        html += '</div>';
+    });
+
+    container.innerHTML = html;
+}
+
+// Render single cell
+function renderCell(typ, titel, beschreibung, location) {
+    if (!typ && !titel) {
+        return `<div class="schedule-cell empty" data-location="${location}"><span class="cell-empty">—</span></div>`;
+    }
+
+    const typeClass = getTypeClass(typ);
+    return `
+        <div class="schedule-cell" data-location="${location}">
+            <span class="schedule-type ${typeClass}">${typ}</span>
+            <h4>${titel}</h4>
+            <p>${beschreibung}</p>
+        </div>
+    `;
+}
+
+// Get CSS class for type
+function getTypeClass(typ) {
+    const t = typ.toLowerCase();
+    if (['vortrag', 'keynote', 'panel'].includes(t)) return 'type-talk';
+    if (['workshop'].includes(t)) return 'type-workshop';
+    return 'type-general';
+}
+
 // ===== Schedule Tabs =====
 function initScheduleTabs() {
     const tabButtons = document.querySelectorAll('.tab-btn');
-    const scheduleDays = document.querySelectorAll('.schedule-day');
 
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
             const day = this.getAttribute('data-day');
+            const scheduleDays = document.querySelectorAll('.schedule-day');
 
             // Remove active class from all buttons and days
             tabButtons.forEach(btn => btn.classList.remove('active'));
