@@ -6,7 +6,7 @@
 
 ---
 
-## Was ist Zitadelle?
+## Was genau ist die Zitadelle?
 
 Zitadelle ist mehr als nur eine Konferenz – es ist ein Zusammentreffen der Bitcoin-Community an einem einzigartigen Ort.
 
@@ -127,7 +127,7 @@ Obonjan liegt im Šibenik-Archipel in Dalmatien, Kroatien. Ein einzigartiger Ort
 > Obonjan bietet O-Tents (klimatisierte Zelte), Glamping Lodges, Island Homes und Horizon Lofts – alle mit Insel-Flair.
 
 **Sind Kinder willkommen?**
-> Ja! Kinder unter 12 Jahren haben freien Eintritt. Ein separates Kinderprogramm wird angeboten.
+> Ja! Kinder sind sehr willkommen. Ein separates Kinderprogramm wird angeboten.
 
 **Gibt es vegetarisches/veganes Essen?**
 > Ja, wir bieten verschiedene Optionen an. Bitte gib bei der Anmeldung deine Präferenzen an.
@@ -139,7 +139,7 @@ Obonjan liegt im Šibenik-Archipel in Dalmatien, Kroatien. Ein einzigartiger Ort
 > Ja, kostenloses WLAN ist auf dem gesamten Gelände verfügbar.
 
 **Wie erreiche ich die Organisatoren?**
-> Per E-Mail an info@zitadelle.event oder über unsere Telegram-Gruppe.
+> Per Signal in der Zitadellen Gruppe oder über unsere Telegram-Gruppe.
 
 ---
 
