@@ -214,6 +214,13 @@ a:hover {
     color: var(--color-text);
 }
 
+.hero-title-img {
+    max-width: 90%;
+    width: clamp(300px, 60vw, 700px);
+    height: auto;
+    margin-bottom: 16px;
+}
+
 .hero-subtitle {
     font-size: clamp(1rem, 2.5vw, 1.25rem);
     color: var(--color-text-secondary);
