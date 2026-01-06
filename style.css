@@ -458,8 +458,8 @@ a:hover {
 }
 
 .speaker-image {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     margin: 0 auto 20px;
     border-radius: 50%;
     overflow: hidden;
@@ -493,6 +493,31 @@ a:hover {
 .speaker-topic {
     color: var(--color-text-muted);
     font-size: 0.8rem;
+}
+
+.speaker-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.speaker-nostr {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 12px;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.speaker-nostr:hover {
+    background: var(--color-accent-hover);
+    transform: scale(1.05);
 }
 
 /* ===== Schedule Section ===== */

@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile Menu Toggle
     initMobileMenu();
 
+    // Load Speakers from CSV
+    loadSpeakersFromCSV();
+
     // Load Schedule from CSV
     loadScheduleFromCSV();
 
@@ -33,6 +36,72 @@ function initMobileMenu() {
             });
         });
     }
+}
+
+// ===== Load Speakers from CSV =====
+async function loadSpeakersFromCSV() {
+    try {
+        const response = await fetch('speaker.csv');
+        const csvText = await response.text();
+        const speakerData = parseCSV(csvText);
+        renderSpeakers(speakerData);
+    } catch (error) {
+        console.error('Fehler beim Laden der Speaker:', error);
+    }
+}
+
+// Render speakers from data
+function renderSpeakers(data) {
+    const container = document.getElementById('speakers-container');
+    if (!container) return;
+
+    let html = '';
+
+    data.forEach(speaker => {
+        const hasImage = speaker.image && speaker.image.trim() !== '';
+        const hasNostr = speaker.nostr && speaker.nostr.trim() !== '';
+        const nostrLink = hasNostr ? `https://njump.me/${speaker.nostr}` : null;
+
+        html += `
+            <div class="speaker-card">
+                <div class="speaker-image">
+                    ${hasImage
+                        ? `<img src="${speaker.image}" alt="${speaker.name}" onerror="this.parentElement.innerHTML='<div class=\\'speaker-placeholder\\'>&#9889;</div>'">`
+                        : '<div class="speaker-placeholder">&#9889;</div>'
+                    }
+                </div>
+                <h3>${speaker.name}</h3>
+                <p class="speaker-role">${speaker.rolle}</p>
+                <p class="speaker-topic">${speaker.topic}</p>
+                ${hasNostr
+                    ? `<a href="${nostrLink}" target="_blank" rel="noopener noreferrer" class="speaker-nostr" title="Nostr Profil">&#9889; Nostr</a>`
+                    : ''
+                }
+            </div>
+        `;
+    });
+
+    // Add "Coming Soon" placeholder
+    html += `
+        <div class="speaker-card">
+            <div class="speaker-image">
+                <div class="speaker-placeholder">&#9889;</div>
+            </div>
+            <h3>Weitere folgen...</h3>
+            <p class="speaker-role">TBA</p>
+            <p class="speaker-topic">Stay tuned!</p>
+        </div>
+    `;
+
+    container.innerHTML = html;
+
+    // Re-observe for animations
+    container.querySelectorAll('.speaker-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
 }
 
 // ===== Load Schedule from CSV =====
