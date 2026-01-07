@@ -207,18 +207,13 @@ a:hover {
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 10vw, 5rem);
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    margin-bottom: 16px;
-    color: var(--color-text);
-}
-
-.hero-title-img {
-    max-width: 90%;
-    width: clamp(300px, 60vw, 700px);
-    height: auto;
-    margin-bottom: 16px;
+    font-size: clamp(3rem, 12vw, 6rem);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin-bottom: 24px;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    text-shadow: 0 0 60px var(--color-accent-glow), 0 0 120px var(--color-accent-glow);
 }
 
 .hero-subtitle {
