@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load Schedule from CSV
     loadScheduleFromCSV();
 
+    // Load Segeltörn from CSV
+    loadSegeltoernFromCSV();
+
     // Smooth Scroll for Navigation
     initSmoothScroll();
 
@@ -222,6 +225,88 @@ function getTypeClass(typ) {
     if (['vortrag', 'keynote', 'panel'].includes(t)) return 'type-talk';
     if (['workshop'].includes(t)) return 'type-workshop';
     return 'type-general';
+}
+
+// ===== Load Segeltörn from CSV =====
+async function loadSegeltoernFromCSV() {
+    try {
+        const response = await fetch('segeltoern.csv');
+        const csvText = await response.text();
+        const segeltoernData = parseCSV(csvText);
+        renderSegeltoern(segeltoernData);
+    } catch (error) {
+        console.error('Fehler beim Laden der Segeltörns:', error);
+    }
+}
+
+// Render Segeltörn table from data
+function renderSegeltoern(data) {
+    const container = document.getElementById('segeltoern-container');
+    if (!container) return;
+
+    let html = `
+        <table class="segeltoern-table">
+            <thead>
+                <tr>
+                    <th class="col-bild">Boot</th>
+                    <th class="col-name">Name</th>
+                    <th class="col-beschreibung">Beschreibung</th>
+                    <th class="col-plaetze">Belegung</th>
+                    <th class="col-kontakt">Kontakt</th>
+                </tr>
+            </thead>
+            <tbody>
+    `;
+
+    data.forEach(row => {
+        const hasBild = row.bild && row.bild.trim() !== '';
+        const kontaktIcon = row.kontakt_typ === 'Signal' ? '&#128172;' : '&#9993;';
+
+        // Parse belegung (z.B. "6/8" -> belegt=6, max=8)
+        const belegungParts = row.belegung ? row.belegung.split('/') : ['0', '0'];
+        const belegt = parseInt(belegungParts[0]) || 0;
+        const max = parseInt(belegungParts[1]) || 0;
+        const isFull = belegt >= max;
+
+        html += `
+            <tr class="segeltoern-row">
+                <td class="col-bild">
+                    <div class="boat-image">
+                        ${hasBild
+                            ? `<img src="${row.bild}" alt="${row.name}" onerror="this.parentElement.innerHTML='<div class=\\'boat-placeholder\\'>&#9973;</div>'">`
+                            : '<div class="boat-placeholder">&#9973;</div>'
+                        }
+                    </div>
+                </td>
+                <td class="col-name"><strong>${row.name}</strong></td>
+                <td class="col-beschreibung">${row.beschreibung}</td>
+                <td class="col-plaetze">
+                    <span class="plaetze-badge ${isFull ? 'full' : ''}">${row.belegung}</span>
+                </td>
+                <td class="col-kontakt">
+                    <a href="${row.kontakt_link}" target="_blank" rel="noopener noreferrer" class="kontakt-btn">
+                        ${kontaktIcon} ${row.kontakt_typ}
+                    </a>
+                </td>
+            </tr>
+        `;
+    });
+
+    html += `
+            </tbody>
+        </table>
+        <p class="segeltoern-hint">Du bietest selbst eine Mitfahrgelegenheit an? Melde dich bei uns!</p>
+    `;
+
+    container.innerHTML = html;
+
+    // Re-observe for animations
+    container.querySelectorAll('.segeltoern-row').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(10px)';
+        el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+        observer.observe(el);
+    });
 }
 
 // ===== Schedule Tabs =====

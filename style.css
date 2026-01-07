@@ -782,6 +782,157 @@ a:hover {
     color: var(--color-accent);
 }
 
+/* ===== Segeltörn Section ===== */
+.segeltoern-section {
+    background: var(--color-bg);
+}
+
+.segeltoern-table-container {
+    margin-top: 60px;
+    overflow-x: auto;
+}
+
+.segeltoern-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-bg-secondary);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+}
+
+.segeltoern-table thead {
+    background: var(--color-bg-tertiary);
+}
+
+.segeltoern-table th {
+    padding: 16px;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.segeltoern-table td {
+    padding: 16px;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.segeltoern-row:last-child td {
+    border-bottom: none;
+}
+
+.segeltoern-row {
+    transition: var(--transition);
+}
+
+.segeltoern-row:hover {
+    background: var(--color-bg-tertiary);
+}
+
+.col-bild {
+    width: 100px;
+}
+
+.col-name {
+    width: 150px;
+}
+
+.col-beschreibung {
+    min-width: 200px;
+}
+
+.col-plaetze {
+    width: 120px;
+    text-align: center;
+}
+
+.col-kontakt {
+    width: 130px;
+}
+
+.boat-image {
+    width: 80px;
+    height: 60px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+}
+
+.boat-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.boat-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--color-accent);
+}
+
+.segeltoern-table .col-name strong {
+    color: var(--color-text);
+    font-size: 0.95rem;
+}
+
+.segeltoern-table .col-beschreibung {
+    color: var(--color-text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.plaetze-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(16, 185, 129, 0.15);
+    color: var(--color-success);
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.plaetze-badge.full {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+}
+
+.kontakt-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: var(--color-accent);
+    color: var(--color-bg);
+    border-radius: var(--border-radius);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.kontakt-btn:hover {
+    background: var(--color-accent-hover);
+    transform: translateY(-2px);
+    color: var(--color-bg);
+}
+
+.segeltoern-hint {
+    text-align: center;
+    margin-top: 24px;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+}
+
 /* ===== FAQ Section ===== */
 .faq-section {
     background: var(--color-bg);
@@ -1006,6 +1157,71 @@ a:hover {
     .speakers-grid,
     .faq-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Segeltörn mobile: card layout */
+    .segeltoern-table,
+    .segeltoern-table thead,
+    .segeltoern-table tbody,
+    .segeltoern-table th,
+    .segeltoern-table td,
+    .segeltoern-table tr {
+        display: block;
+    }
+
+    .segeltoern-table thead {
+        display: none;
+    }
+
+    .segeltoern-row {
+        margin-bottom: 16px;
+        border: 1px solid var(--color-border);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+    }
+
+    .segeltoern-table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .segeltoern-table td:last-child {
+        border-bottom: none;
+    }
+
+    .col-bild {
+        width: 100%;
+        text-align: center;
+        padding-top: 16px;
+    }
+
+    .boat-image {
+        width: 120px;
+        height: 80px;
+        margin: 0 auto;
+    }
+
+    .col-name {
+        width: 100%;
+        text-align: center;
+    }
+
+    .col-beschreibung {
+        min-width: auto;
+    }
+
+    .col-plaetze {
+        width: 100%;
+    }
+
+    .col-kontakt {
+        width: 100%;
+        text-align: center;
+    }
+
+    .kontakt-btn {
+        width: 100%;
+        justify-content: center;
     }
 
     .footer-grid {
