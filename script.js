@@ -176,9 +176,9 @@ function renderSchedule(data) {
     let html = `
         <div class="schedule-locations">
             <div class="schedule-time-header">Zeit</div>
-            <div class="location-header location-stage">Hauptbühne</div>
-            <div class="location-header location-amphitheater">Amphitheater</div>
-            <div class="location-header location-pool">Pool</div>
+            <div class="location-header location-stage">Allgemein</div>
+            <div class="location-header location-amphitheater">Pavilion/Amphitheater</div>
+            <div class="location-header location-pool">Strand/Pool</div>
         </div>
     `;
 
