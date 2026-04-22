@@ -190,9 +190,9 @@ function renderSchedule(data) {
             html += `
                 <div class="schedule-row">
                     <div class="schedule-time">${row.Zeit}</div>
-                    ${renderCell(row.Hauptbuehne_Typ, row.Hauptbuehne_Titel, row.Hauptbuehne_Beschreibung, 'Hauptbühne')}
-                    ${renderCell(row.Amphitheater_Typ, row.Amphitheater_Titel, row.Amphitheater_Beschreibung, 'Amphitheater')}
-                    ${renderCell(row.Pool_Typ, row.Pool_Titel, row.Pool_Beschreibung, 'Pool')}
+                    ${renderCell(row.Hauptbuehne_Typ, row.Hauptbuehne_Titel, row.Hauptbuehne_Beschreibung, 'Allgemein')}
+                    ${renderCell(row.Amphitheater_Typ, row.Amphitheater_Titel, row.Amphitheater_Beschreibung, 'Pavilion/Amphitheater')}
+                    ${renderCell(row.Pool_Typ, row.Pool_Titel, row.Pool_Beschreibung, 'Strand/Pool')}
                 </div>
             `;
         });
