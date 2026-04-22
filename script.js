@@ -224,6 +224,7 @@ function getTypeClass(typ) {
     const t = typ.toLowerCase();
     if (['vortrag', 'keynote', 'panel'].includes(t)) return 'type-talk';
     if (['workshop'].includes(t)) return 'type-workshop';
+    if (['Sport'].includes(t)) return 'type-sport';
     return 'type-general';
 }
 
