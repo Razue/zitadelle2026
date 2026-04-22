@@ -696,6 +696,11 @@ a:hover {
     color: var(--color-text-secondary);
 }
 
+.type-sport {
+    background: rgba(139, 92, 246, 0.15);
+    color: var(--color-primary); /* Eine violette/primäre Variable */
+}
+
 /* ===== Location Section ===== */
 .location-section {
     background: var(--color-bg-secondary);
